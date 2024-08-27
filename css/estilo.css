@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.login-container {
+    text-align: center;
+}
+
+.login-form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}

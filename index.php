@@ -1,6 +1,7 @@
 <?php
+include 'assets/autentica.php';
+include 'assets/db.php';
 
-include 'db.php';
 
 include 'header.php';
 

@@ -284,8 +284,8 @@ label {
 
                     if ($conn->connect_error) {
                         die("Conexão falhou: " . $conn->connect_error);
-                    }
-
+                    } 
+           
                     $sql_code = "SELECT
                     c.NUMERO_PROCESSO_DIGITAL,
                     MIN(c.NOME_REQUERENTE) AS NOME_REQUERENTE,

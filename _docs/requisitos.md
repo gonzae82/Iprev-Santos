@@ -18,3 +18,7 @@ https://calculojuridico.com.br/api-indices-correcao-monetaria/
     - Consulta direto na API
 
 
+## Executados
+- Tabela de Usuários
+- Sitema de autenticação baseado em usuário e senha
+- Pagina de Login e Função para Logoff
