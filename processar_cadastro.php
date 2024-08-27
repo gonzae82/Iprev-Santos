@@ -1,6 +1,9 @@
 <?php
+include_once 'db.php';
+
 // Verifica se a variável $_POST está definida e não está vazia
 if (isset($_POST) && !empty($_POST)) {
+
     // Coleta dos dados do formulário
     $numero_processo_digital = $_POST['NUMERO_PROCESSO_DIGITAL'] ?? '';
     $nome_requerente = $_POST['NOME_REQUERENTE'] ?? '';
@@ -23,11 +26,11 @@ if (isset($_POST) && !empty($_POST)) {
     $data_responsavel = $_POST['DATA_RESPONSAVEL'] ?? '';
     $conclusoes = $_POST['CONCLUSOES'] ?? '';
 
-    // Conexão com o banco de dados
+  /*//Conexão com o banco de dados
     $servidor = "localhost";
     $usuario = "root";
-    $senha = "";
-    $db = "processos_judiciais";
+    $senha = "siaemicr";
+    $db = "processos_judiciais"; */
 
     $conn = new mysqli($servidor, $usuario, $senha, $db);
 
@@ -184,11 +187,6 @@ foreach ($data_indice as $key => $data) {
     echo "<td>Total do CAL_IR_RETENCAO_LEGAL: ".$total_cal_ir."</td>";
     echo "</tr>";
 }
-
-
-
-
-
 
     $conn->close();
 } else {

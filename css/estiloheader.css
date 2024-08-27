@@ -1,33 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: "helvetica, arial";
 }
 
-#tituloPrincipal{
+#tituloPrincipal {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 80px;
 }
 
-#NumProcesso{
+#NumProcesso {
     text-align: center;
-    font-style:oblique;
+    font-style: oblique;
     margin-bottom: 30px;
 }
 
 
-#CadastrarProcesso h6{
+#CadastrarProcesso h6 {
     margin-top: 100px;
     text-align: center;
     margin-bottom: 120px;
 }
 
-#NovoCadastro{
-    text-decoration:none;
+#NovoCadastro {
+    text-decoration: none;
     color: rgb(198, 160, 9);
 }
-

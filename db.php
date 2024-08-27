@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$senha = "siaemicr";
 $db = "processos_judiciais";
 
 // Estabelecer conexão com o banco de dados
