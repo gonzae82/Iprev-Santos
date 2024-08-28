@@ -1,8 +1,14 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$senha = "siaemicr";
-$db = "processos_judiciais";
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$servidor = $_ENV['DB_HOST'];
+$usuario = $_ENV['DB_USER'];
+$senha = $_ENV['DB_PASS'];
+$db = $_ENV['DB_NAME'];
+
 
 // Estabelecer conexão com o banco de dados
 $mysqli = new mysqli($servidor, $usuario, $senha, $db);
