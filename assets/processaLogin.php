@@ -1,10 +1,14 @@
 <?php
 session_start();
-include 'db.php';
+
+//Incluir o arquivo de conexão com o banco de dados
+include_once 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
+
+
 
     // Prevenir SQL Injection
     $usuario = $mysqli->real_escape_string($usuario);
@@ -19,9 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verificar a senha
         if (password_verify($senha, $row['senha'])) {
+            
             $_SESSION['usuario'] = $usuario;
-            header("Location: ../index.php");
+            header("Location: ../dashboard.php?dir=views&file=home");
             exit();
+            
         } else {
             echo "Senha incorreta.";
         }

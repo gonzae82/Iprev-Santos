@@ -1,18 +1,52 @@
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.principal{
+    max-width: 80%;
+    margin-left:20px;
+}
+
+
+.conteudo {
+    position: absolute;
+    top: 50px; /* Ajuste conforme a altura do cabeçalho */
+    bottom: 90px;/* Ajuste conforme a altura do rodapé */
+    left: 0;
+    right: 0;
+    overflow-y: auto; /* Permite rolagem vertical */
+    padding: 20px;
+}
+
+.centro {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */    
+}
+
+.logo-central {
+    padding: 20px; /* Exemplo de padding */
+    max-width: 100%;  /* Garante que a imagem não ultrapasse a largura da div */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura da div */
+    object-fit: contain; /* Mantém a proporção da imagem */
 }
 
 .login-container {
-    text-align: center;
+    text-align: center;    
 }
 
 .login-form {
-    display: inline-block;
+    display: display-inline-block;
     text-align: left;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 5px;
+}
+
+.mensagem{
+    color:red;
+    margin-top:20px;
 }

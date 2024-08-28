@@ -7,18 +7,17 @@ Tabela Emenda Constitucional 113/2021
 https://calculojuridico.com.br/api-indices-correcao-monetaria/
 
 
-## Sugestões
+## Melhorias
 - Criação de página de Login: Aumento da Segurança em Núvem
 - Criação de página para Listagem de Processos (Melhoria) - CRUD?
 - Criação de página para Cadastro de Processo (Melhoria)
     - Botão: Gerar Relatório: PDF
-
 - Tabela de Índices de correção monetária: possibilidade de integrar com API
     - Sync direto no banco
     - Consulta direto na API
-
 
 ## Executados
 - Tabela de Usuários
 - Sitema de autenticação baseado em usuário e senha
 - Pagina de Login e Função para Logoff
+- Criação de uma página de Dashboard
