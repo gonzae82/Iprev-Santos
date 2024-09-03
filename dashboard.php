@@ -7,7 +7,7 @@ include 'assets/db.php';
 <html lang="pt-br">
 
 <head>
-    <title>Dashboard</title>
+    <title>Dashboard- iPrev Santos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,63 +19,11 @@ include 'assets/db.php';
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- Bootstrap -->
-    
-
-    
+   
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-
-<style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {
-            height: 100vh;
-            /* Set height to 100% of the viewport height */
-        }
-
-        /* Set gray background color and 100% height */
-        .sidenav {
-            padding-top: 20px;
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-
-        .navbar-collapse {
-            z-index: 10000; 
-            position: relative;
-        }
-        /* Set black background color, white text and some padding */
-        footer {
-            background-color: #555;
-            color: white;
-            padding: 15px;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
-            }
-
-            .row.content {
-                height: auto;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -97,7 +45,9 @@ include 'assets/db.php';
                     <li><a href="dashboard.php?dir=views&file=usuariosList"><span class="glyphicon glyphicon-user"></span> Usuários</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nome']?></a></li>                        
                     <li><a href="views/logout.php"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -131,4 +81,5 @@ include 'assets/db.php';
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script/scripts.js"></script>
 </html>

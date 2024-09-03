@@ -1,6 +1,8 @@
 <?php
+// Carregar o autoloader do Composer
 require __DIR__ . '/../vendor/autoload.php';
 
+// Carregar as variáveis de ambiente
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -15,7 +17,7 @@ if (strtoupper(substr($OS, 0, 3)) === 'WIN') {
     $senha = $_ENV['DB_PASS'];
     $db = $_ENV['DB_NAME'];
 } else {
-    // Código para outros sistemas operacionais (Linux, macOS, etc.)
+    // Código para rodar em ambiente Linux, em produção na web
     $servidor = $_ENV['DB_HOST'];
     $usuario = $_ENV['DB_USER_WEB'];
     $senha = $_ENV['DB_PASS_WEB'];

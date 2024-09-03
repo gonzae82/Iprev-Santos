@@ -68,10 +68,6 @@ CREATE TABLE `informacoes_financeiras` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tabelas despejadas
---
-
---
 -- Índices de tabela `cadastro_cliente`
 --
 ALTER TABLE `cadastro_cliente`
@@ -108,3 +104,25 @@ CREATE TABLE usuarios (
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE INDEX idx_unique_email_per_id (email)
 );
+-- Gere dados para preencher a tabela `usuarios`
+INSERT INTO `usuarios` (`nome`, `email`, `senha`, `cargo`) VALUES
+('User 1', 'user1@example.com', 'password1', 'Role 1'),
+('User 2', 'user2@example.com', 'password2', 'Role 2'),
+('User 3', 'user3@example.com', 'password3', 'Role 3'),
+('User 4', 'user4@example.com', 'password4', 'Role 4'),
+('User 5', 'user5@example.com', 'password5', 'Role 5'),
+('User 6', 'user6@example.com', 'password6', 'Role 6'),
+('User 7', 'user7@example.com', 'password7', 'Role 7'),
+('User 8', 'user8@example.com', 'password8', 'Role 8'),
+('User 9', 'user9@example.com', 'password9', 'Role 9'),
+('User 10', 'user10@example.com', 'password10', 'Role 10'),
+('User 11', 'user11@example.com', 'password11', 'Role 11'),
+('User 12', 'user12@example.com', 'password12', 'Role 12'),
+('User 13', 'user13@example.com', 'password13', 'Role 13'),
+('User 14', 'user14@example.com', 'password14', 'Role 14'),
+('User 15', 'user15@example.com', 'password15', 'Role 15'),
+('User 16', 'user16@example.com', 'password16', 'Role 16'),
+('User 17', 'user17@example.com', 'password17', 'Role 17'),
+('User 18', 'user18@example.com', 'password18', 'Role 18'),
+('User 19', 'user19@example.com', 'password19', 'Role 19'),
+('User 20', 'user20@example.com', 'password20', 'Role 20');

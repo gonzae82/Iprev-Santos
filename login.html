@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - iPrev Santos</title>
 
     <!-- Bootstrap CSS e CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -19,40 +20,30 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
 </head>
 
 <body>
-    <div class="conteudo">
-        <div class="principal">
-            <div class="centro">
-                <div class="logo-central">
-                    <div class="login-container">
+    <div class="container">
+        <div class="container-central">
+            <form class="login-form" action="assets/processaLogin.php" method="post">
+                <img class="logo-central" src="img/iprevsantos.png" alt="">
 
-                        <form class="login-form" action="assets/processaLogin.php" method="post">
-                            <img class="logo-central" src="img/iprevsantos.png" alt="">
-
-                            <div class="form-group">
-                                <label for="usuario">Usuário:</label>
-                                <input type="usuario" class="form-control" id="usuario" name="usuario">
-                            </div>
-                            <div class="form-group">
-                                <label for="senha">Senha:</label>
-                                <input type="password" class="form-control" id="senha" name="senha">
-                            </div>
-                            <div class="mensagem"></div>
-                            <hr />
-                            <button type="submit" class="btn btn-primary">Entrar</button>
-                        </form>
-
-                    </div>
+                <div class="form-group">
+                    <label for="usuario">Usuário:</label>
+                    <input type="usuario" class="form-control" id="usuario" name="usuario" value="eg@elido.com.br">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" value="123">
+                </div>
+                <div class="mensagem"></div>
+                <hr />
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
         </div>
     </div>
-    <!-- Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </html>
