@@ -1,32 +1,32 @@
 <?php
 /*
-Lista a tabela de clientes e cria o botão para adicionar um novo processo e editar um processo existente.
+Lista a tabela de usuários e cria o botão para adicionar um novo usuário e editar um usuário existente.
 */
 
 //Select de todos os usuários no banco de dados
-$SQL = "SELECT * FROM cadastro_cliente";
+$SQL = "SELECT * FROM indices";
 
 //Executa a query
 $RS = $mysqli->query($SQL);
 
 //Cria um array para armazenar os dados
-$clientes = [];
+$indices = [];
 
 //Percorre os dados e armazena no array criado
 while ($row = $RS->fetch_assoc()) {
-    $clientes[] = $row;
+    $indices[] = $row;
 }
 
 ?>
 
 
-
 <div class="principal">
     <div class="col-sm-12 text-left">
-        <h1>Listas de Processos</h1><!--Titulo da Página-->
+        <h1>Indíces de Correção Monetária</h1><!--Titulo da Página-->
         <hr>
-        <a href="dashboard.php?dir=views&file=processosAdd"><span class="glyphicon glyphicon-plus"></span> Novo Cadastro</a>
+        <a href="dashboard.php?dir=views&file=indicesAdd"><span class="glyphicon glyphicon-plus"></span> Novo Cadastro</a>
         <hr>
+
 
         <?php
         //Exibe a mensagem de sucesso ao retornar Adicionar/Editar ou Apagar Usuário
@@ -40,34 +40,35 @@ while ($row = $RS->fetch_assoc()) {
         ?>
 
 
-        <div class="col-sm-8 tabela">
+        <div class="col-sm-4 tabela">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th># Processo</th>
-                        <th>Nome</th>
-                        <th>CPF</th>
+                        <th>Referência</th>
+                        <th>Data</th>
+                        <th>Indíce</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
+
                     <?php
                     //Percorre o array de usuários e exibe os dados na tabela
-                    foreach ($clientes as $cliente) {
+                    foreach ($indices as $indice) {
                         echo "<tr>";
-                        echo "<td>" . $cliente['NUMERO_PROCESSO_DIGITAL'] . "</td>";
-                        echo "<td>" . $cliente['NOME_REQUERENTE']  . "</td>";
-                        echo "<td>" . $cliente['CPF_REQUERENTE'] . "</td>";
-
+                        echo "<td>" . $indice['referencia']  . "</td>";
+                        //Checar se há necessidade de exibir esta coluna ou mudar o formato da data
+                        echo "<td>" . date('d/m/Y', strtotime($indice['data'])) . "</td>";
+                        echo "<td>" . $indice['indice'] . "</td>";
                         echo "<td>
-                        <a href='dashboard.php?id=" . $cliente['ID_CLIENTE'] . "&dir=views&file=processosEdit'>
+                        <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=indicesEdit'>
                         <button type='button' class='btn btn-outline-dark'>
                             <span class='glyphicon glyphicon-edit'>                
                             </span>
                         </button>
                         </a>
                     
-                        <a href='dashboard.php?id=" . $cliente['ID_CLIENTE'] . "&dir=views&file=processosDel'>
+                        <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=indicesDel'>
                         <button type='button' class='btn btn-outline-dark'>
                             <span class='glyphicon glyphicon-remove'>                
                             </span>
@@ -81,7 +82,6 @@ while ($row = $RS->fetch_assoc()) {
                     //encerra a conexão com o banco de dados
                     $mysqli->close();
                     ?>
-
                 </tbody>
             </table>
         </div>

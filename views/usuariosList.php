@@ -40,7 +40,7 @@ while ($row = $RS->fetch_assoc()) {
         ?>
         
         
-        <div style="overflow: auto; height: 500px;">         
+        <div class="tabela">         
             <table class="table table-hover">
                 <thead>
                     <tr>                        

@@ -4,7 +4,7 @@
     ],
 
     "[php]": {
-        "editor.defaultFormatter": "vscode.php-language-features",
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
         "editor.formatOnSave": true
     },
     "[html]": {

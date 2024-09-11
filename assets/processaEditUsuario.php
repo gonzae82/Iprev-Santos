@@ -21,12 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         where id = " . $_POST['id'];
 
     // Executar a query    
-    if ($mysqli->query($SQL) === TRUE) {        
+    if ($mysqli->query($SQL) === TRUE) {
 
         // Redirecionar para a página de listagem de usuários
-        echo "Usuário atualizado com sucesso.";
-        header('Location: ../dashboard.php?dir=views&file=usuariosList&msg=Usuário alterado com sucesso.');  
-        
+        //echo "Usuário atualizado com sucesso.";
+        header('Location: ../dashboard.php?dir=views&file=usuariosList&msg=Usuário alterado com sucesso.');
     } else {
         // Caso ocorra algum erro
         echo "Erro: " . $SQL . "<br>" . $mysqli->error;
@@ -35,5 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fechar a conexão com o banco de dados
     $mysqli->close();
 }
-
-?>
