@@ -1,4 +1,4 @@
 .env
 .vscode/
-/vendor/
-/_docs/
+vendor/
+_docs/
