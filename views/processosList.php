@@ -4,7 +4,7 @@ Lista a tabela de clientes e cria o botão para adicionar um novo processo e edi
 */
 
 //Select de todos os usuários no banco de dados
-$SQL = "SELECT * FROM cadastro_cliente";
+$SQL = "SELECT * FROM processos";
 
 //Executa a query
 $RS = $mysqli->query($SQL);
