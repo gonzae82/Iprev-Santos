@@ -85,47 +85,12 @@
             <label for="CONCLUSOES">Conclusões do Responsável:</label>
             <input type="text" id="CONCLUSOES" name="CONCLUSOES" class="form-control">
         </div>
-
-        <!-- HTML para o campo Data de Início -->
-        <div class="form-group col-md-3">
-            <label for="data_indice">Data de Início:</label>
-            <div id="data_indice_container">
-                <input type="date" class="data_indice form-control" name="data_indice[]">
-                <button type="button" class="btn btn-secondary add_input">Adicionar</button>
-            </div>
-        </div>
-
-        <!-- HTML para o campo Valor do Índice -->
-        <div class="form-group col-md-3">
-            <label for="valor_indice">Valor do Índice:</label>
-            <div id="valor_indice_container">
-                <input type="text" class="valor_indice form-control" name="valor_indice[]">
-                <button type="button" class="btn btn-secondary add_input">Adicionar</button>
-            </div>
-        </div>
-
-        <!-- HTML para o campo Diferença inicial -->
-        <div class="form-group col-md-3">
-            <label for="diferenca_inicial">Diferença inicial:</label>
-            <div id="diferenca_inicial_container">
-                <input type="text" class="diferenca_inicial form-control" name="diferenca_inicial[]">
-                <button type="button" class="btn btn-secondary add_input">Adicionar</button>
-            </div>
-        </div>
-
-        <!-- HTML para o campo IR -->
-        <div class="form-group col-md-3">
-            <label for="ir">IR:</label>
-            <div id="ir_container">
-                <input type="text" class="ir form-control" name="ir[]">
-                <button type="button" class="btn btn-secondary add_input">Adicionar</button>
-            </div>
-        </div>
-
+        
+        
         <div class="form-group col-md-12">
-            <input type="submit" value="Enviar" class="btn btn-success">
+        <hr/>   
+        <input type="submit" value="Enviar" class="btn btn-success">
             <a href="dashboard.php?dir=views&file=processosList" class="btn btn-primary">Voltar</a>
         </div>
     </form>
 </div>
-

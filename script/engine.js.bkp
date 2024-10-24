@@ -1,0 +1,35 @@
+// JavaScript para adicionar/remover inputs dinâmicos
+document.addEventListener('DOMContentLoaded', function() {
+    function addInput(containerId, inputClass, inputName) {
+        const container = document.getElementById(containerId);
+        const addButton = container.querySelector('.add_input');
+
+        addButton.addEventListener('click', function() {
+            const input = document.createElement('input');
+            if (inputClass === 'data_indice') {
+                input.type = 'date'; // Alterado para "date" para o campo de data
+            } else {
+                input.type = 'text'; // Alterado para "text" para os demais campos
+            }
+            input.className = inputClass;
+            input.name = inputName + '[]';
+
+            const removeButton = document.createElement('button');
+            removeButton.type = 'button';
+            removeButton.className = 'btn btn-secondary remove_input';
+            removeButton.textContent = 'Remover';
+            removeButton.addEventListener('click', function() {
+                container.removeChild(input);
+                container.removeChild(removeButton);
+            });
+
+            container.appendChild(input);
+            container.appendChild(removeButton);
+        });
+    }
+
+    addInput('data_indice_container', 'data_indice', 'data_indice');
+    addInput('valor_indice_container', 'valor_indice', 'valor_indice');
+    addInput('diferenca_inicial_container', 'diferenca_inicial', 'diferenca_inicial');
+    addInput('ir_container', 'ir', 'ir');
+});

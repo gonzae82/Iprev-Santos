@@ -1,35 +1,32 @@
 // JavaScript para adicionar/remover inputs dinâmicos
 document.addEventListener('DOMContentLoaded', function() {
-    function addInput(containerId, inputClass, inputName) {
-        const container = document.getElementById(containerId);
-        const addButton = container.querySelector('.add_input');
+    function addLinha() {
+        const linhaContainer = document.getElementById('linha-container');
+        const novaLinha = document.querySelector('.linha').cloneNode(true);
 
-        addButton.addEventListener('click', function() {
-            const input = document.createElement('input');
-            if (inputClass === 'data_indice') {
-                input.type = 'date'; // Alterado para "date" para o campo de data
-            } else {
-                input.type = 'text'; // Alterado para "text" para os demais campos
-            }
-            input.className = inputClass;
-            input.name = inputName + '[]';
+        // Limpar os campos da nova linha
+        novaLinha.querySelectorAll('input').forEach(input => input.value = '');
 
-            const removeButton = document.createElement('button');
-            removeButton.type = 'button';
-            removeButton.className = 'btn btn-secondary remove_input';
-            removeButton.textContent = 'Remover';
-            removeButton.addEventListener('click', function() {
-                container.removeChild(input);
-                container.removeChild(removeButton);
-            });
+        // Criar o botão de remover para as novas linhas
+        const removeLinhaButton = document.createElement('button');
+        removeLinhaButton.type = 'button';
+        removeLinhaButton.className = 'btn btn-danger remove_linha';
+        removeLinhaButton.textContent = 'Remover Linha';
 
-            container.appendChild(input);
-            container.appendChild(removeButton);
+        // Adicionar funcionalidade para remover a linha
+        removeLinhaButton.addEventListener('click', function() {
+            linhaContainer.removeChild(novaLinha);
         });
+
+        novaLinha.appendChild(removeLinhaButton);
+
+        // Adicionar a nova linha no container
+        linhaContainer.appendChild(novaLinha);
     }
 
-    addInput('data_indice_container', 'data_indice', 'data_indice');
-    addInput('valor_indice_container', 'valor_indice', 'valor_indice');
-    addInput('diferenca_inicial_container', 'diferenca_inicial', 'diferenca_inicial');
-    addInput('ir_container', 'ir', 'ir');
+    // Botão para adicionar uma nova linha
+    const addLinhaButton = document.getElementById('add_linha');
+    addLinhaButton.addEventListener('click', addLinha);
+
+    
 });
