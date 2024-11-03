@@ -28,6 +28,13 @@ if (isset($_GET['id'])) {
         <h1>Editar Processo</h1><!--Titulo da Página-->
         <hr>
     </div>
+   
+    <div class="col-sm-12 text-left">
+        
+        <a href="dashboard.php?dir=views&file=processosDemonstrativoList&id=<?php echo $_GET['id'] ?>"class="btn btn-success">Editar Índices</a>
+        <hr>
+    </div>
+  
 
     <form action="assets/processaEditprocessos.php" method="post" class="row row-cols-1 row-cols-md-4 g-4">
     <div class="form-group col-md-3">
@@ -52,7 +59,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="form-group col-md-3">
             <label for="CITACAO_REQUERENTE">Citação requerente:</label>
-            <input type="text" id="CITACAO_REQUERENTE" name="CITACAO_REQUERENTE" class="form-control" value="<?php echo htmlspecialchars($processo[0]['CITACAO_REQUERENTE']); ?>">
+            <input type="date" id="CITACAO_REQUERENTE" name="CITACAO_REQUERENTE" class="form-control" value="<?php echo htmlspecialchars($processo[0]['CITACAO_REQUERENTE']); ?>">
         </div>
         <div class="form-group col-md-3">
             <label for="CALCULO_IR">Cálculo do IR:</label>

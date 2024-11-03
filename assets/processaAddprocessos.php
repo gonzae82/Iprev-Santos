@@ -26,6 +26,7 @@ if (isset($_POST) && !empty($_POST)) {
     $data_responsavel = $mysqli->real_escape_string($_POST['DATA_RESPONSAVEL'] ?? '');
     $conclusoes = $mysqli->real_escape_string($_POST['CONCLUSOES'] ?? '');
 
+
     // Preparação e execução da consulta SQL para inserção na tabela "processos"
     $SQL_PROCESSO_ADD = "INSERT INTO processos(NUMERO_PROCESSO_DIGITAL, NOME_REQUERENTE, CPF_REQUERENTE, REG_REQUERENTE, PROCESSO_ADMINISTRATIVO, CITACAO_REQUERENTE, CALCULO_IR, DATA_ATUALIZACAO, VALOR_PRINCIPAL, VALOR_ATUALIZADO, JUROS_MORATORIOS, CUSTAS, HONORARIOS, HONORARIOS_PERCENTUAL, IPREV_VALOR, NOME_RESPONSAVEL, CARGO_RESPONSAVEL, DATA_RESPONSAVEL, CONCLUSOES, CAPEP_VALOR)
         VALUES ('$numero_processo_digital', '$nome_requerente', '$cpf_requerente', '$reg_requerente', '$processo_administrativo', '$citacao_requerente', '$calculo_ir', '$data_atualizacao', '$valor_principal', '$valor_atualizado', '$juros_moratorios', '$custas', '$honorarios', '$honorarios_percentual', '$iprev_valor', '$nome_responsavel', '$cargo_responsavel', '$data_responsavel', '$conclusoes', '$capep_valor')";

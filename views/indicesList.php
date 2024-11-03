@@ -19,15 +19,12 @@ while ($row = $RS->fetch_assoc()) {
 
 ?>
 
-
 <div class="principal">
     <div class="col-sm-12 text-left">
         <h1>Indíces de Correção Monetária</h1><!--Titulo da Página-->
         <hr>
         <a href="dashboard.php?dir=views&file=indicesAdd"><span class="glyphicon glyphicon-plus"></span> Novo Cadastro</a>
         <hr>
-
-
         <?php
         //Exibe a mensagem de sucesso ao retornar Adicionar/Editar ou Apagar Usuário
         if (isset($_GET['msg'])) {
@@ -38,9 +35,7 @@ while ($row = $RS->fetch_assoc()) {
             echo "<div class='alert alert-danger' role='alert'>" . $_GET['msgd'] . "</div>";
         }
         ?>
-
-
-        <div class="col-sm-4 tabela">
+        <div class="col-sm-8 tabela">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -73,8 +68,7 @@ while ($row = $RS->fetch_assoc()) {
                             <span class='glyphicon glyphicon-remove'>                
                             </span>
                         </button>
-                        </a>
-                    
+                        </a>            
                     
                         </td>";
                         echo "</tr>";

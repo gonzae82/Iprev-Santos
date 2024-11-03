@@ -19,8 +19,6 @@ while ($row = $RS->fetch_assoc()) {
 
 ?>
 
-
-
 <div class="principal">
     <div class="col-sm-12 text-left">
         <h1>Listas de Processos</h1><!--Titulo da Página-->
@@ -38,7 +36,6 @@ while ($row = $RS->fetch_assoc()) {
             echo "<div class='alert alert-danger' role='alert'>" . $_GET['msgd'] . "</div>";
         }
         ?>
-
 
         <div class="col-sm-8 tabela">
             <table class="table table-hover">

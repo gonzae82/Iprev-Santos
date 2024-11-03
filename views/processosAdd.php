@@ -27,7 +27,7 @@
         </div>
         <div class="form-group col-md-3">
             <label for="CITACAO_REQUERENTE">Citação requerente:</label>
-            <input type="text" id="CITACAO_REQUERENTE" name="CITACAO_REQUERENTE" class="form-control">
+            <input type="date" id="CITACAO_REQUERENTE" name="CITACAO_REQUERENTE" class="form-control">
         </div>
         <div class="form-group col-md-3">
             <label for="CALCULO_IR">Cálculo do IR:</label>
@@ -85,8 +85,7 @@
             <label for="CONCLUSOES">Conclusões do Responsável:</label>
             <input type="text" id="CONCLUSOES" name="CONCLUSOES" class="form-control">
         </div>
-        
-        
+                
         <div class="form-group col-md-12">
         <hr/>   
         <input type="submit" value="Enviar" class="btn btn-success">
