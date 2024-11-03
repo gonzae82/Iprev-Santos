@@ -85,6 +85,9 @@ if (isset($_GET['id'])) {
                     <th>IR Inicial</th>
                     <th>Índice Inicial</th>
                     <th>Diferença Atualizada</th>
+                    <th>CAPEP</th>
+                    <th>IPREV</th>
+                    <th>IR</th>
                 </tr>
             </thead>
             <tbody>
@@ -97,6 +100,9 @@ if (isset($_GET['id'])) {
                     echo "<td>" . "R$ " . number_format($indice['diferenca_inicial'], 2, ',', '.') . "</td>";                    
                     echo "<td>" . "R$ " . number_format($indice['ir_inicial'], 2, ',', '.') . "</td>";
                     echo "<td>" . $indice['indice_inicial'] . "</td>";
+                    echo "<td>XXX</td>";
+                    echo "<td>XXX</td>";
+                    echo "<td>XXX</td>";
                     echo "<td>XXX</td>";
 
 

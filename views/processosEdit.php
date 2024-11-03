@@ -31,7 +31,7 @@ if (isset($_GET['id'])) {
    
     <div class="col-sm-12 text-left">
         
-        <a href="dashboard.php?dir=views&file=processosDemonstrativoList&id=<?php echo $_GET['id'] ?>"class="btn btn-success">Editar Índices</a>
+        <a href="dashboard.php?dir=views&file=processosDemonstrativoList&id=<?php echo $_GET['id'] ?>"class="btn btn-primary">Editar Índices</a>
         <hr>
     </div>
   

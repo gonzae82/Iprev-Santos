@@ -44,6 +44,7 @@ include 'assets/db.php';
                     <li class="active"><a href="dashboard.php?dir=views&file=home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                     <li><a href="dashboard.php?dir=views&file=processosList"><span class="glyphicon glyphicon-list"></span> Listar Processos</a></li>
                     <li><a href="dashboard.php?dir=views&file=indicesList"><span class="glyphicon glyphicon-list"></span> Indíces</a></li>
+                    <li><a href="dashboard.php?dir=views&file=selicList"><span class="glyphicon glyphicon-list"></span> Selic</a></li>
                     <li><a href="dashboard.php?dir=views&file=usuariosList"><span class="glyphicon glyphicon-user"></span> Usuários</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
