@@ -35,16 +35,3 @@ if ($mysqli->connect_errno) {
     return "Erro ao conectar a base de dados: " . $mysqli->connect_error;
     exit();
 }
-
-
-function converteValor($valor) {
-    // Remove todos os caracteres não numéricos, exceto a vírgula
-    $valor = preg_replace('/[^\d,]/', '', $valor);
-    
-    // Substitui a vírgula por ponto para o formato do MySQL
-    $valor = str_replace(',', '.', $valor);
-
-    // Retorna o valor como float
-    return (float)$valor;
-}
-

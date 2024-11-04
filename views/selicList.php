@@ -53,7 +53,7 @@ while ($row = $RS->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $indice['referencia']  . "</td>";
                         //Checar se há necessidade de exibir esta coluna ou mudar o formato da data
-                        echo "<td>" . date('d/m/Y', strtotime($indice['data'])) . "</td>";
+                        echo "<td>" . date('Y-m', strtotime($indice['data'])) . "</td>";
                         echo "<td>" . $indice['indice'] . " % </td>";
                         echo "<td>
                         <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=selicEdit'>

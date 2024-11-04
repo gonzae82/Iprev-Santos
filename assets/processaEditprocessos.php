@@ -15,7 +15,11 @@ if (isset($_POST) && !empty($_POST)) {
     $data_atualizacao = $mysqli->real_escape_string($_POST['DATA_ATUALIZACAO'] ?? '');
     $valor_principal = $mysqli->real_escape_string($_POST['VALOR_PRINCIPAL'] ?? '');
     $valor_atualizado = $mysqli->real_escape_string($_POST['VALOR_ATUALIZADO'] ?? '');
-    $juros_moratorios = $mysqli->real_escape_string($_POST['JUROS_MORATORIOS'] ?? '');
+    $selic_mes_final = $mysqli->real_escape_string($_POST['selic_mes_final'] ?? '');
+    $indice_final = $mysqli->real_escape_string($_POST['indice_final'] ?? '');
+    $indice_selic_final = $mysqli->real_escape_string($_POST['indice_selic_final'] ?? '');
+
+    
     $custas = $mysqli->real_escape_string($_POST['CUSTAS'] ?? '');
     $honorarios = $mysqli->real_escape_string($_POST['HONORARIOS'] ?? '');
     $honorarios_percentual = $mysqli->real_escape_string($_POST['HONORARIOS_PERCENTUAL'] ?? '');
@@ -38,7 +42,10 @@ if (isset($_POST) && !empty($_POST)) {
         DATA_ATUALIZACAO = '$data_atualizacao', 
         VALOR_PRINCIPAL = '$valor_principal', 
         VALOR_ATUALIZADO = '$valor_atualizado', 
-        JUROS_MORATORIOS = '$juros_moratorios', 
+        selic_mes_final = '$selic_mes_final', 
+        indice_final = '$indice_final', 
+        indice_selic_final = '$indice_selic_final', 
+        
         CUSTAS = '$custas', 
         HONORARIOS = '$honorarios', 
         HONORARIOS_PERCENTUAL = '$honorarios_percentual', 

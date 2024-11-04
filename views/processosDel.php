@@ -5,7 +5,7 @@ Apaga o registro selecionado
 
 //Verifica se o id do processo foi passado pela URL, caso não haja, redireciona para a página de listagem de processos
 if (isset($_GET['id'])) {
-  $SQL = "SELECT * FROM cadastro_cliente  where ID_CLIENTE   = " . $_GET['id'];
+  $SQL = "SELECT * FROM processos  where ID_CLIENTE   = " . $_GET['id'];
   $RS = $mysqli->query($SQL);
   $cliente = [];
 
@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
 
   if (count($cliente) == 0)
     header('Location: dashboard.php?dir=views&file=processosList');
-} else
+}
 
 ?>
 

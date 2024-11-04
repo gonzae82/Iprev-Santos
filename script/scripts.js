@@ -8,9 +8,6 @@ $(document).ready(function() {
     
     }
 
-    console.log('scripts.js loaded');
-
-
     $('#enviar').on('click', function () {
         console.log("Botão clicado");
 

@@ -18,52 +18,68 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<div class="principal">
+<div class="principal" id="data-page" data-page="processosDemonstrativoList">
     <div class="col-sm-12 text-left">
         <h1>Editar Índices do Processo</h1><!--Titulo da Página-->
         <hr>        
     </div>
 
-    <form action="assets/processaEditDemonstrativo.php" method="post" class="row row-cols-1 row-cols-md-4 g-4">
-        <!-- Adiciona Linha nova a páginha-->
-        <div id="linha" class="linha">
-            <div class="form-group col-md-3">
-                <label for="data_indice">Data Inicial:</label>
-                <div id="data_indice_container">
-                    <input type="date" id="data_inicial" class="form-control" name="data_inicial">
-                    
-                    
-                </div>
-            </div>
-            
-            <div class="form-group col-md-3">
-                <label for="diferenca_inicial">Diferença inicial:</label>
-                <div id="diferenca_inicial_container">
-                    <input type="text" class="diferenca_inicial form-control" name="diferenca_inicial">
-                </div>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="ir">IR Inicial:</label>
-                <div id="ir_container">
-                    <input type="text" class="form-control" name="ir_inicial">
-                </div>
-            </div>
-
-            <div class="form-group col-md-3">
-                <label for="valor_indice">Índice Inicial:</label>
-                <div id="valor_indice_container">
-                    <input type="text" class="form-control" name="indice_inicial">
-                </div>
+    <form action="assets/processaEditDemonstrativo.php" method="post" class="row g-4">
+    <!-- Adiciona Linha nova à página -->
+    <div id="linha" class="linha col-12">
+        <div class="form-group col-md-2">
+            <label for="tipo_indice">Tipo de Índice:</label>
+            <div id="tipo_indice_container">
+                <select id="tipo_indice" class="form-control" name="tipo_indice">
+                    <option value="normal">Normal</option>
+                    <option value="13">13º</option>
+                </select>
             </div>
         </div>
-    <hr />
-    <!-- Botão para adicionar nova linha -->   
+
+        <div class="form-group col-md-2">
+            <label for="data_inicial">Data Inicial:</label>
+            <div id="data_indice_container">
+                <input type="date" id="data_inicial" class="form-control" name="data_inicial">                                    
+            </div>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="diferenca_inicial">Diferença Inicial:</label>
+            <div id="diferenca_inicial_container">
+                <input type="text" class="diferenca_inicial form-control" name="diferenca_inicial">
+            </div>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="ir">IR Inicial:</label>
+            <div id="ir_container">
+                <input type="text" class="form-control" name="ir_inicial">
+            </div>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="indice_inicial">Índice Inicial:</label>
+            <div id="valor_indice_container">
+                <input type="text" class="form-control" id="indice_inicial" name="indice_inicial">
+            </div>
+        </div>
+    </div>
+           
+    <!-- Botão para adicionar nova linha -->
+    <div class="form-group col-md-12">
+    <hr />   
     <input type="hidden" name="processo_id" value="<?php echo $processo_id ?>"> 
-    <input type="submit" value="Adicionar Dados" class="btn btn-success">
-    <input type="reset" value="Limpar" class="btn btn-warning">
-    <a href="dashboard.php?dir=views&file=processosList&id=<?php echo $processo_id ?>" class="btn btn-primary">Voltar</a>
-    <hr />
-    </form>
+    <div class="d-flex justify-content-between mt-3">
+        <input type="submit" value="Adicionar Dados" class="btn btn-success">
+        <input type="reset" value="Limpar" class="btn btn-warning">
+        <a href="dashboard.php?dir=views&file=processosEdit&id=<?php echo $processo_id ?>" class="btn btn-primary">Voltar</a>
+    </div>
+    <hr />   
+</div>    
+   
+</form>
+
 
     <?php
         //Exibe a mensagem de sucesso ao retornar Adicionar/Editar ou Apagar Usuário
@@ -80,31 +96,39 @@ if (isset($_GET['id'])) {
         <table id="demonstrativo" class="table table-hover">
             <thead>
                 <tr>
-                    <th>Data Inicial</th>                    
+                    <th>#</th>          
+                    <th>Tipo Índice</th>          
+                    <th>Data Inicial</th>
                     <th>Diferença Inicial</th>
                     <th>IR Inicial</th>
                     <th>Índice Inicial</th>
+                    <th>Selic Acumulada</th>
                     <th>Diferença Atualizada</th>
                     <th>CAPEP</th>
                     <th>IPREV</th>
-                    <th>IR</th>
+                    <th>I.R.</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 //Percorre o array de usuários e exibe os dados na tabela                                      
+                $n=1;
                 foreach ($processo as $indice) {
                     echo "<tr>";
                     $indice['data_inicial'] = date('m/Y', strtotime($indice['data_inicial']));
+                    echo "<td>" . $n . "</td>";
+                    echo "<td>" . $indice['tipo_indice'] . "</td>";
                     echo "<td>" . $indice['data_inicial'] . "</td>";                    
                     echo "<td>" . "R$ " . number_format($indice['diferenca_inicial'], 2, ',', '.') . "</td>";                    
                     echo "<td>" . "R$ " . number_format($indice['ir_inicial'], 2, ',', '.') . "</td>";
-                    echo "<td>" . $indice['indice_inicial'] . "</td>";
-                    echo "<td>XXX</td>";
-                    echo "<td>XXX</td>";
-                    echo "<td>XXX</td>";
-                    echo "<td>XXX</td>";
-
+                    echo "<td>" . number_format($indice['indice_inicial'], 6, ',', '.') . "</td>";                    
+                    echo "<td>" . $indice['selic_acumulada'] . " %</td>"; 
+                    echo "<td>" . "R$ " . $indice['diferenca_atualizada'] . "</td>"; 
+                    echo "<td>" . "R$ " . $indice['capep'] . "</td>"; 
+                    echo "<td>" . "R$ " . $indice['iprev'] . "</td>"; 
+                    echo "<td>" . "R$ " . $indice['ir'] . "</td>"; 
+                    
 
                     echo "<td>
                         <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=processosDemonstrativoEdit'>
@@ -123,9 +147,9 @@ if (isset($_GET['id'])) {
                                             
                         </td>";
                     echo "</tr>";
-                }
-                //encerra a conexão com o banco de dados
-                $mysqli->close();
+                    //Incrementa contador de Linha
+                    $n++;
+                }               
                 ?>
 
             </tbody>
