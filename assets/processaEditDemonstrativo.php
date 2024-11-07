@@ -39,8 +39,7 @@ if (isset($_POST) && !empty($_POST)) {
         $AL_IPREV = 0.12;
     }else
         $AL_IPREV = 0.14;
-    
-    
+ 
     
     if ($data_inicial_check <= '2021-12') {
         //Para uso do Indice

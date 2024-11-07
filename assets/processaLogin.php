@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $usuario;
             $_SESSION['usuario_id'] = $row['id'];
             $_SESSION['nome'] = $row['nome'];
+            $_SESSION['cargo'] = $row['cargo'];
 
             // Redireciona para a página de dashboard
             header("Location: ../dashboard.php?dir=views&file=home");

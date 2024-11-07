@@ -10,11 +10,8 @@ SELIC
 - Acessibilidade: a definir
 
 ## Em Desenvolvimento
-- Criação de página para Cadastro de Processos (Melhoria) - CRUD (Em Desenvolvimento)
-    - Finalizar Create Processos
-    - Finalizar Edit Processos Detalhes em Índices
-    - Gerar Página Resumo em HTML ( CAPA )
-    - Botão: Gerar Relatório: PDF(trocar função por gravação de vídeo )
+- Gerar Página Resumo em HTML ( CAPA )
+- Gravação de Vídeo Explicativo
 
 ## Executados
 - Tabela de Usuários
@@ -22,8 +19,6 @@ SELIC
 - Pagina de Login e Função para Logoff
 - Criação de uma página de Dashboard
 - Criação de página de Login: Aumento da Segurança em Núvem
-
-# Recentes
 - Consulta direto na API para índices e Selic
 - Criação de página para incluir os índices relacionados ao Processo
     - Melhorado add de linha de cálculo, apenas 1(um) botão para adicionar e remover linha
@@ -34,3 +29,9 @@ SELIC
     - Aplicado regras de cálculo para diferente anos
 - Inclusão de Tabela Selic
     
+
+# Recentes
+- Criação de página para Cadastro de Processos (Melhoria) - CRUD (Em Desenvolvimento)
+    - Finalizar Create Processos
+
+

@@ -130,14 +130,7 @@ if (isset($_GET['id'])) {
                     echo "<td>" . "R$ " . $indice['ir'] . "</td>"; 
                     
 
-                    echo "<td>
-                        <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=processosDemonstrativoEdit'>
-                        <button type='button' class='btn btn-outline-dark'>
-                            <span class='glyphicon glyphicon-edit'>                
-                            </span>
-                        </button>
-                        </a>
-                    
+                    echo "<td>                        
                         <a href='dashboard.php?id=" . $indice['id'] . "&dir=views&file=processosDemonstrativoDel'>
                         <button type='button' class='btn btn-outline-dark'>
                             <span class='glyphicon glyphicon-remove'>                

@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("pageType:", pageType);
 
     // Verifique se está na página correta
-    if (pageType === "processosEdit") { // Substitua por sua página específica
+    if (pageType === "processosEdit" || "processosAdd") { // Substitua por sua página específica
         const dataAtualizacaoElement = document.getElementById("DATA_ATUALIZACAO");
         const indice_finalElement = document.getElementById("indice_final"); // Corrigi para o ID correto
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("pageType:", pageType);
 
     // Verifique se está na página correta
-    if (pageType === "processosEdit") { // Substitua por sua página específica
+    if (pageType === "processosEdit" || "processosAdd") { // Substitua por sua página específica
         const selic_mes_finalElement = document.getElementById("selic_mes_final");
         const indice_selic_finalElement = document.getElementById("indice_selic_final"); // Corrigi para o ID correto       
 

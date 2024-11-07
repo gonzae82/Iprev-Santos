@@ -10,7 +10,7 @@ include_once 'db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Apagar o usuário no banco de dados
-    $SQL = "DELETE FROM cadastro_cliente  WHERE  ID_CLIENTE = " . $_POST['id'];
+    $SQL = "DELETE FROM processos WHERE  ID_CLIENTE = " . $_POST['id'];
 
     // Executar a query
     if ($mysqli->query($SQL) === TRUE) {

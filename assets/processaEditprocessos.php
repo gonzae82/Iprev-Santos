@@ -1,4 +1,7 @@
 <?php
+// Iniciar a sessão
+session_start();
+
 include_once 'db.php';
 // Verifica se a variável $_POST está definida e não está vazia
 if (isset($_POST) && !empty($_POST)) {
@@ -25,9 +28,12 @@ if (isset($_POST) && !empty($_POST)) {
     $honorarios_percentual = $mysqli->real_escape_string($_POST['HONORARIOS_PERCENTUAL'] ?? '');
     $capep_valor = $mysqli->real_escape_string($_POST['CAPEP_VALOR'] ?? '');
     $iprev_valor = $mysqli->real_escape_string($_POST['IPREV_VALOR'] ?? '');
-    $nome_responsavel = $mysqli->real_escape_string($_POST['NOME_RESPONSAVEL'] ?? '');
-    $cargo_responsavel = $mysqli->real_escape_string($_POST['CARGO_RESPONSAVEL'] ?? '');
-    $data_responsavel = $mysqli->real_escape_string($_POST['DATA_RESPONSAVEL'] ?? '');
+    
+    //Verifica quem é o usuário logado para ser o Responsável pelo demonstrativo
+    $nome_responsavel = $_SESSION['nome'];;
+    $cargo_responsavel = $_SESSION['cargo'];
+    
+    $data_responsavel = date('Y-m-d');
     $conclusoes = $mysqli->real_escape_string($_POST['CONCLUSOES'] ?? '');
 
     // Preparação e execução da consulta SQL para inserção na tabela "processos"
@@ -44,8 +50,7 @@ if (isset($_POST) && !empty($_POST)) {
         VALOR_ATUALIZADO = '$valor_atualizado', 
         selic_mes_final = '$selic_mes_final', 
         indice_final = '$indice_final', 
-        indice_selic_final = '$indice_selic_final', 
-        
+        indice_selic_final = '$indice_selic_final',         
         CUSTAS = '$custas', 
         HONORARIOS = '$honorarios', 
         HONORARIOS_PERCENTUAL = '$honorarios_percentual', 
