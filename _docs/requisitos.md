@@ -1,37 +1,26 @@
 #  Requisitos do Projeto
-Disponível na núvem (https://www.elido.com.br/projeto/iprevsantos) (Não Atualizado)
-
-Tabela Emenda Constitucional 113/2021
-SELIC
-
-## Melhorias
-- Tabela de Índices de correção monetária: Integrado via API
-    - Consulta direto na API para índices e Selic
-- Acessibilidade: a definir
+- Disponibilizado em nuvem (https://www.elido.com.br/projetos/iprevsantos/)
+- Github: https://github.com/gonzae82/Iprev-Santos
 
 ## Em Desenvolvimento
-- Gerar Página Resumo em HTML ( CAPA )
 - Gravação de Vídeo Explicativo
 
 ## Executados
-- Tabela de Usuários
+- Criação de página de Login: Aumento da Segurança em Núvem
+- Tabela de Usuários - CRUD: Create, Read, Update, Delete
 - Sitema de autenticação baseado em usuário e senha
 - Pagina de Login e Função para Logoff
-- Criação de uma página de Dashboard
-- Criação de página de Login: Aumento da Segurança em Núvem
-- Consulta direto na API para índices e Selic
-- Criação de página para incluir os índices relacionados ao Processo
-    - Melhorado add de linha de cálculo, apenas 1(um) botão para adicionar e remover linha
-    - Refatorar cálculo, conforme planilha
-- Criação de página para Cadastro de Processos (Melhoria) - CR (OK) / UD (Em Desenvolvimento)
-    - Refatorar tabela cadastro_cliente -> processos
-    - Refatorar tabela informacoes_financeiras -> processos_detalhes, novo Item
-    - Aplicado regras de cálculo para diferente anos
-- Inclusão de Tabela Selic
-    
+- Criação de página de Dashboard com menu superior
+- Criação de seção de Índice - CRUD: Create, Read, Update, Delete
+- Criação de seção de Taxa Selic - CRUD: Create, Read, Update, Delete
 
-# Recentes
-- Criação de página para Cadastro de Processos (Melhoria) - CRUD (Em Desenvolvimento)
-    - Finalizar Create Processos
+- Seção dos Processos
+    - Lista de Processos - CRUD: Create, Read, Update, Delete
+        - Formatação dos dados de entrada separados para melhor visualização
+        - Update automático de Responsável, usuário logado é o Responsável pela atualização do Processo
+    - Lista de Demonstrativo do Processo - CRUD: Create, Read, Update, Delete
+        - Utilização de API REST Conf para consulta de inserção de Índice e Taxa Selic
+        - Página de cálculo refatorada, inclui regras de negócio baseado nas condições do Arquivo Excel de Cálculo
+
 
 
